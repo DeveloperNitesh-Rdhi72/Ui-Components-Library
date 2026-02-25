@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="failed" onclick="showProcess(failedmsg)">Process Failed!</button>
+        <button class="completed" onclick="showProcess(completedmsg)">Process Completed</button>
+        <button class="wrong" onclick="showProcess(wrongdmsg)">Something Went wrong!</button>
+    </div>
+    <div class="failed-modal hide modal" style="--bg-clr:rgba(255, 0, 0, 0.158); --bod-clr:red;">
+        <i class="fa-regular fa-circle-xmark" style="--out-clr:red;"></i>
+        <p>Process Failed! <br> Please Try again</p>
+        <button>OK</button>
+    </div>
+    <div class="completed-modal hide modal" style="--bg-clr:rgba(0, 128, 0, 0.336);--bod-clr:green;">
+        <i class="fa-solid fa-check" style="--out-clr:green;"></i>
+        <p>Process Completed <br> Go back to home</p>
+        <button>OK</button>
+    </div>
+    <div class="wrong-modal modal" style="--bg-clr:rgba(255, 166, 0, 0.445);--bod-clr:orange;">
+        <i class="fa-solid fa-exclamation" style="--out-clr:orange;"></i>
+        <p>Somthing Went Wrong! <br> Please Try again</p>
+        <button>OK</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
